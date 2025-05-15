@@ -9,5 +9,8 @@ describe('template spec', () => {
 
     cy.contains('Войти').click()
     cy.url().should('include', '/account/main')
+
+    cy.contains('Выбрать роль').click()
+    cy.contains('Я являюсь студентом').click()
   })
 })

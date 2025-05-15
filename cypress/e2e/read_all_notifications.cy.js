@@ -9,5 +9,11 @@ describe('template spec', () => {
 
     cy.contains('Войти').click()
     cy.url().should('include', '/account/main')
+
+    cy.contains('Уведомления').click()
+    cy.url().should('include', '/notification')
+
+    cy.contains('Прочитать все').click()
+    cy.get('.notification-indicator').should('not.be.visible')
   })
 })
